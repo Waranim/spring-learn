@@ -5,11 +5,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Primary
-public class GPU {
+public class GPU implements MotherboardComponent {
 
     public GPU(){
     }
 
+    @Override
     public void work() {
         //Rough activity
     }

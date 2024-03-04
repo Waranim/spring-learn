@@ -7,16 +7,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class Motherboard {
     @Autowired
-    private CPU cpu;
-    private RAM ram;
-    private final GPU gpu;
+    @Qualifier("CPU")
+    private MotherboardComponent cpu;
+    private MotherboardComponent ram;
+    private final MotherboardComponent gpu;
 
-    public Motherboard(GPU gpu) {
+    public Motherboard(@Qualifier("GPU") MotherboardComponent gpu) {
         this.gpu = gpu;
     }
 
     @Autowired
-    public void setRam(RAM ram){
+    @Qualifier("RAM")
+    public void setRam(MotherboardComponent ram){
         this.ram = ram;
     }
 }
