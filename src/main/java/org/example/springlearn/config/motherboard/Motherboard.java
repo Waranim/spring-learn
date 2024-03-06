@@ -1,4 +1,4 @@
-package org.example.springlearn;
+package org.example.springlearn.config.motherboard;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,7 +12,7 @@ public class Motherboard {
     private MotherboardComponent ram;
     private final MotherboardComponent gpu;
 
-    public Motherboard(@Qualifier("GPU") MotherboardComponent gpu) {
+    public Motherboard(@Qualifier("createGpu") MotherboardComponent gpu) {
         this.gpu = gpu;
     }
 

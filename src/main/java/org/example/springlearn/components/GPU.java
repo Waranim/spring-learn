@@ -1,8 +1,7 @@
-package org.example.springlearn;
+package org.example.springlearn.components;
 
-import org.springframework.stereotype.Component;
+import org.example.springlearn.config.motherboard.MotherboardComponent;
 
-@Component
 public class GPU implements MotherboardComponent {
 
     public GPU(){
